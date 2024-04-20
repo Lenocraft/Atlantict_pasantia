@@ -1,0 +1,17 @@
+tr {
+    color: var(--dark);
+}
+
+.col-form-label {
+    color: var(--dark); 
+}
+
+.form-select {
+    background-color: var(--light);
+    color: var(--dark);
+}
+
+.page-link {
+    background-color: var(--light);
+    color: var(--dark);
+}

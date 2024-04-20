@@ -1,0 +1,137 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+#todo {
+    background: transparent;
+    box-shadow: 1px 1px 40px 0px #00000044;
+    width: 500px;
+    height: 600px;
+    border-radius: 15px;
+
+}
+
+#todo #title {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+    padding-bottom: 10%;
+}
+
+#todo #color {
+    border-top-right-radius: 15px;
+    border-top-left-radius: 15px;
+    margin-top: -41.2%;
+    background: #0b2241;
+    width: 500px;
+    height: 220px;
+}
+
+#todo #title h1 {
+    text-align: center;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+#todo #formulario {
+    width: 400px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 10%;
+}
+
+#todo #formulario input {
+    width: 100%;
+    height: 40px;
+    border-radius: 5px;
+    border: 1px solid #00000044;
+    padding-left: 10px;
+    margin-bottom: 20px;
+}
+
+#todo #formulario input:hover {
+    box-shadow: 0 0 5px gray;
+}
+
+#todo #formulario input:focus {
+    border: 1px solid #ffffff;
+}
+
+#todo #formulario p {
+    font-weight: 500;
+    color: #000;
+    margin-bottom: 10px;
+}
+
+#todo #formulario input::placeholder {
+    font-size: 15px;
+}
+
+#todo #boton {
+    margin-left: auto;
+    margin-right: auto;
+    width: 400px;
+    margin-top: 10%;
+}
+
+#todo #boton button {
+    background: #0b2241;
+    color: #fff;
+    border: transparent;
+    border-radius: 15px;
+    width: 100%;
+    height: 40px;
+    font-size: 15px;
+    transition: 0.5s;
+}
+
+#todo #boton button:hover {
+    box-shadow: 10px 10px 10px 10px #0000001c;
+}
+
+hr{
+    position: absolute;
+    width: 400px;
+    border: 1px solid #ffffff80;
+}
+
+input .nombre:focus{
+    border: #0b2241 1pc solid;
+}
+
+.btn button{
+    background: #ff0000;
+    border: transparent;
+    border-radius: 15px;
+    padding: 5px 20px 5px 20px;
+    float: right;
+    text-align: center;
+    color: #fff;
+    box-shadow: 0px 0px 10px 1px #0000003a;
+    font-size: 15px;
+    margin-right: 50px;
+}
+
+.btn button span{
+    font-size: 15px;
+    margin-top: 5px;
+    margin-right: 5px;
+}
+
+.btn button p{
+    float: right;
+    margin-top: 2px;
+}
+
+.fomularios{
+    display: flex;
+    gap: 10%;
+    margin-left: 30%;
+    align-items: center;
+    justify-content: center;
+}

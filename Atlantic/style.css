@@ -1,0 +1,67 @@
+body {
+    background-color: #f8f9fa; /* Color de fondo del cuerpo */
+    font-family: 'Arial', sans-serif;
+    color: #495057; /* Color del texto */
+    background: linear-gradient(to right, #4facfe, #00f2fe);
+}
+
+.header {
+    background-color: #007bff; /* Color de fondo del encabezado */
+    color: #ffffff; /* Color del texto en el encabezado */
+    padding: 10px;
+    text-align: center;
+}
+
+.container {
+    margin-top: 20px;
+}
+
+.form-section {
+    background-color: #ffffff; /* Color de fondo de las secciones del formulario */
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1); /* Sombra suave */
+}
+
+label {
+    font-weight: bold;
+}
+
+.form-control {
+    margin-bottom: 15px;
+}
+
+.btn {
+    margin-right: 10px;
+}
+
+.btn:hover {
+transform: scale(1.05);
+transition: transform 0.3s ease-in-out;
+}
+
+.form-section {
+box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+border: 1px solid #ced4da;
+}
+
+.btn {
+cursor: pointer;
+}
+input[type="checkbox"], input[type="radio"] {
+appearance: none;
+border: 2px solid #007bff;
+width: 15px;
+height: 15px;
+border-radius: 3px;
+margin-right: 5px;
+}
+
+input[type="checkbox"]:checked, input[type="radio"]:checked {
+background-color: #007bff;
+}
+.btn-primary, .btn-success, .btn-info, .btn-danger, .btn-secondary {
+font-size: 1.2em;
+padding: 10px 20px;
+}
