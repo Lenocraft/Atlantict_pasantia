@@ -8,9 +8,6 @@ $query->execute();
 
 $impresiones = $query->fetchAll();
 
-
-
-
 ?>
 
 <!DOCTYPE html>
@@ -237,7 +234,7 @@ $impresiones = $query->fetchAll();
                 <i class="fas fa-trash"></i> Ir a Reporte
             </button>
 
-            <input type="submit" name="submit" class="btn btn-danger" value="Delete Record">
+            <input type="submit" name="submit" class="btn btn-danger" onclick="showAlert('Delete Record')" value="Delete Record">
 
 
             <button type="button" class="btn btn-secondary" onclick="showAlert('Refresh')">
@@ -257,20 +254,6 @@ $impresiones = $query->fetchAll();
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 
-    <script>
-        $(document).ready(function() {
-            $('.delete-record').click(function() {
-                // Obtener el ID del registro seleccionado
-                var id = $('#po1').val();
-                // Verificar si se ha seleccionado un ID antes de eliminar
-                if (id) {
-                    deleteRecord(id);
-                } else {
-                    showAlert('Please select a record to delete');
-                }
-            });
-        });
-    </script>
     <script>
         function getInformacion() {
             const text = document.getElementById('po1');
