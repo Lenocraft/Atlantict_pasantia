@@ -38,6 +38,12 @@
         $consulta->execute(array($impresionRestante, $id));
     }
 
+    if($_POST['submit'] == "Delete Record"){
+        $consulta = $mbd->prepare('DELETE FROM impresiones WHERE po1=?');
+        // Suponiendo que $id contiene el ID del registro que quieres actualizar
+        $consulta->execute(array($id));
+    }
+
 
     
 
