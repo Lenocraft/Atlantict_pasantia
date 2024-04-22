@@ -194,26 +194,24 @@ $impresiones = $query->fetchAll();
                     <input type="text" class="form-control" id="totalImpresion" name="totalImpresion" required data-parsley-required-message="Este campo es obligatorio">
 
                     <label for="cantidadImpresion">Cantidad De Impresion</label>
-                    <input type="text" class="form-control" id="cantidadImpresion" name="cantidadImpresion" required data-parsley-required-message="Este campo es obligatorio">
+                    <input type="text" class="form-control" id="cantidadImpresion" name="cantidadImpresion" required data-parsley-required-message="Este campo es obligatorio" oninput="checkImpresiones()">
 
                     <label for="impresionRestante">Impresion Restante</label>
-                    <input type="text" class="form-control" id="impresionRestante" name="impresionRestante" required data-parsley-required-message="Este campo es obligatorio">
-
-
+                    <input type="text" class="form-control" id="impresionRestante" name="impresionRestante" required data-parsley-required-message="Este campo es obligatorio" oninput="checkImpresiones()">
 
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="aprobadoCalidad" name="aprobadoCalidad">
-                        <label class="form-check-label" for="aprobadoCalidad">Aprobado Calidad</label required data-parsley-required-message="Este campo es obligatorio">
+                        <label class="form-check-label" for="aprobadoCalidad">Aprobado Calidad</label>
                     </div>
 
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="impreso" name="impreso">
-                        <label class="form-check-label" for="impreso">Impreso</label required data-parsley-required-message="Este campo es obligatorio">
+                        <label class="form-check-label" for="impreso">Impreso</label>
                     </div>
 
                     <div class="form-check">
                         <input type="checkbox" class="form-check-input" id="noImpreso" name="noImpreso">
-                        <label class="form-check-label" for="noImpreso">No Impreso</label required data-parsley-required-message="Este campo es obligatorio">
+                        <label class="form-check-label" for="noImpreso">No Impreso</label>
                     </div>
                 </div>
 
@@ -253,6 +251,32 @@ $impresiones = $query->fetchAll();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        function checkImpresiones() {
+            var totalImpresion = parseInt(document.getElementById('totalImpresion').value);
+            var cantidadImpresion = parseInt(document.getElementById('cantidadImpresion').value);
+            var impresionRestante = parseInt(document.getElementById('impresionRestante').value);
+
+            if (cantidadImpresion > totalImpresion) {
+                document.getElementById('cantidadImpresion').value = totalImpresion;
+                cantidadImpresion = totalImpresion;
+            }
+
+            if (impresionRestante > totalImpresion) {
+                document.getElementById('impresionRestante').value = totalImpresion;
+                impresionRestante = totalImpresion;
+            }
+
+            var cantidadRestante = totalImpresion - cantidadImpresion;
+            document.getElementById('impresionRestante').value = cantidadRestante;
+
+            if (cantidadRestante < 0) {
+                document.getElementById('cantidadImpresion').value = totalImpresion;
+                document.getElementById('impresionRestante').value = 0;
+            }
+        }
+    </script>
 
     <script>
         function getInformacion() {
