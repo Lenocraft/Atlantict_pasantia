@@ -44,13 +44,6 @@
         $consulta->execute(array($po1));
     }
 
-    if($_POST['submit'] == "Refresh Record"){
-        header("location: ./usuario.php");
-    }
-
-
-    
-
   header('location: usuario.php');
 
    
