@@ -234,10 +234,8 @@ $impresiones = $query->fetchAll();
 
             <input type="submit" name="submit" class="btn btn-danger" onclick="showAlert('Delete Record')" value="Delete Record">
 
+            <input type="submit" name="submit" class="btn btn-secondary" onclick="showAlert('Refresh')" value="Refresh Record">
 
-            <button type="button" class="btn btn-secondary" onclick="showAlert('Refresh')">
-                <i class="fas fa-sync-alt"></i> Refresh
-            </button>
 
 
 
