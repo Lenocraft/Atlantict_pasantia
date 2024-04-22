@@ -234,7 +234,12 @@ $impresiones = $query->fetchAll();
 
             <input type="submit" name="submit" class="btn btn-danger" onclick="showAlert('Delete Record')" value="Delete Record">
 
-            <input type="submit" name="submit" class="btn btn-secondary" onclick="showAlert('Refresh')" value="Refresh Record">
+
+            <button type="button" class="btn btn-secondary" onclick="showAlertAndRefresh()">
+                <i class="fas fa-sync-alt"></i> Refresh
+            </button>
+
+
 
 
 
@@ -249,6 +254,24 @@ $impresiones = $query->fetchAll();
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+
+    <script>
+        function showAlertAndRefresh() {
+            Swal.fire({
+                title: '¿Estás seguro?',
+                text: 'Se perderán los cambios no guardados.',
+                icon: 'warning',
+                showCancelButton: true,
+                confirmButtonColor: '#3085d6',
+                cancelButtonColor: '#d33',
+                confirmButtonText: 'Sí, refrescar página'
+            }).then((result) => {
+                if (result.isConfirmed) {
+                    location.reload();
+                }
+            });
+        }
+    </script>
 
     <script>
         function checkImpresiones() {
